@@ -1,3 +1,7 @@
+import viakhaLogo from "../assets/viakhaLogo.jpg";
+import edu from "../assets/edu.png";
+import lumpy from "../assets/lumpy.jpg";
+import NxtWaveLogo from "../assets/nxtWave.png";
 import {
   mobile,
   backend,
@@ -32,19 +36,12 @@ import {
 } from "../assets";
 
 export const navLinks = [
-  {
-    id: "about",
-    title: "About",
-  },
-  {
-    id: "work",
-    title: "Work",
-  },
-  {
-    id: "contact",
-    title: "Contact",
-  },
+  { id: "about", title: "About" },
+  { id: "skills", title: "Skills" },
+  { id: "projects", title: "Projects" },
+  { id: "contact", title: "Contact" },
 ];
+
 
 const services = [
   {
@@ -99,6 +96,15 @@ const technologies = [
     icon: nodejs,
   },
   {
+    name: "JWT",
+    icon: nodejs,
+  },
+    {
+    name: "Expres",
+    icon: nodejs,
+  },
+  
+  {
     name: "MongoDB",
     icon: mongodb,
   },
@@ -111,71 +117,67 @@ const technologies = [
     icon: git,
   },
   {
-    name: "figma",
+    name: "git hub",
     icon: figma,
   },
+  
+];
+const experiences = [
   {
-    name: "docker",
-    icon: docker,
+    title: "B.Tech in Computer Science",
+    company_name: "Visakha Institute of Engineering and Technology",
+    icon: viakhaLogo ,
+    iconBg: "#383E56",
+    date: "2020 – 2024",
+    points: [
+      "Strong foundation in programming, algorithms, and web development",
+    ],
+  },
+   {
+    title: "Cybersecurity Virtual Internship",
+    company_name: "EduSkills & Palo Alto",
+    icon: edu,
+    iconBg: "#E6DEDD",
+    date: "Sep – Nov 2022",
+    points: ["Completed virtual internship on cybersecurity fundamentals"],
+  },
+  {
+    title: "Lumpy Skin Disease Detection App",
+    company_name: "B.Tech Final Year Project",
+    icon: lumpy,
+    iconBg: "#383E56",
+    date: "2023 – 2024",
+    points: [
+      "Developed ML web app for early LSD detection in cattle",
+      "Technologies: Python, TensorFlow, OpenCV, Flask, HTML, CSS, JS",
+      "Handled data preprocessing, CNN model training, and UI integration",
+    ],
+  },
+  {
+    title: "MERN Stack Developer",
+    company_name: "NxtWave",
+    icon: NxtWaveLogo,
+    iconBg: "#383E56",
+    date: "2025",
+    points: [
+      "Completed MERN stack training and built scalable web apps",
+      "Worked on multiple projects using React, Node.js, Express, and MongoDB",
+    ],
+  },
+  {
+    title: "Frontend Development Internship",
+    company_name: "Edunet / NxtWave",
+    icon: NxtWaveLogo,
+    iconBg: "#383E56",
+    date: "2025",
+    points: [
+      "Completed Frontend Development training",
+      "Gained hands-on experience with React.js, JavaScript, HTML, CSS",
+      "Built multiple responsive web applications during the course",
+    ],
   },
 ];
 
-const experiences = [
-  {
-    title: "Software Developer",
-    company_name: "Tata Consultancy Services",
-    icon: tcs,
-    iconBg: "#383E56",
-    date: "September 2021 -  Present",
-    points: [
-      // "Developing and maintaining web applications using React.js, Next.js, Express.js and other related technologies.",
-      "Developed and maintained reliable web applications with user-friendly interfaces using ReactJS, Next.js, and Tailwind CSS, collaborating with cross-functional teams to meet project requirements",
-      "Managed databases (MySQL, MongoDB) and developed scalable JavaScript applications using Express.js, ensuring data integrity, security, and maintainability.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      // "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-},
-  {
-    title: "Founder and CEO",
-    company_name: "IntElligence Tech Solutions",
-    icon: intelligence,
-    iconBg: "#000000",
-    date: "July 2022 - Present",
-    points: [
-      "As founder and CEO, I lead IntElligence Tech Solutions in creating cutting-edge web applications, staying ahead of industry trends.",
-      "I oversee the entire development process, ensuring top-quality code and seamless, responsive applications using the latest technologies.",
-      "I translate client needs into robust, user-friendly applications, delivering custom solutions that drive growth and engagement.",
-      "Under my leadership, we've launched numerous high-impact web applications, improving efficiency and generating significant ROI for clients.",
-    ],
-  },
-  {
-    title: "Software Developer Intern",
-    company_name: "Sun Mobility",
-    icon: sun,
-    iconBg: "#E6DEDD",
-    date: "March 2021 - August 2021",
-    points: [
-      "Collaborated with a team to create and maintain web applications, gaining hands-on experience in HTML5, CSS3, and JavaScript.",
-      "Assisted in designing and developing user interfaces with React.JS, creating interactive and responsive web experiences.",
-      "Contributed to web application development and maintenance, improving performance through active participation in codebase enhancements and troubleshooting.",
-      "Gained exposure to frameworks like Bootstrap by helping create visually appealing and user-friendly web interfaces.",
-    ],
-  },
-  // {
-  //   title: "Full stack Developer",
-  //   company_name: "Meta",
-  //   icon: meta,
-  //   iconBg: "#E6DEDD",
-  //   date: "Jan 2023 - Present",
-  //   points: [
-  //     "Developing and maintaining web applications using React.js and other related technologies.",
-  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //     "Implementing responsive design and ensuring cross-browser compatibility.",
-  //     "Participating in code reviews and providing constructive feedback to other developers.",
-  //   ],
-  // },
-];
 
 const testimonials = [
   {
@@ -205,77 +207,96 @@ const testimonials = [
 ];
 
 const projects = [
+ 
   {
-    name: "Payment App",
+    name: "Todo Application",
     description:
-      // "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-      "A full-featured web application developed using the MERN stack, designed to simulate the functionality of PayTM. This app supports user registration, authentication, and secure banking transactions. Built with modern tools and technologies such as React with Vite, Tailwind CSS for styling.",
+      "Built backend API for managing todos with filtering by status, priority, category, and due date using Node.js, Express, and SQLite. Implemented CRUD operations and robust error handling.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "express.js",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: payment,
-    source_code_link: "https://github.com/syedahmedullah14/PayTM-Project",
-  },
-  {
-    name: "Company Portfolio",
-    description:
-      "Built a responsive portfolio using ReactJS, leveraging components and state management for a seamless user experience across devices. Developed a feature for dynamic theme changes, enhancing user engagement by allowing personalization of background and foreground colors through efficient state management.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "bootsrap5",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
+      { name: "nodejs", color: "blue-text-gradient" },
+      { name: "express", color: "pink-text-gradient" },
+      { name: "sqlite", color: "green-text-gradient" },
     ],
     image: intelligence2,
-    source_code_link: "https://int-elligence.co.uk/",
+    source_code_link: "",
   },
+ 
   {
-    name: "Rental Management System",
+      name: "Recipe Book Web App",
     description:
-      "Developed a robust system for a construction equipment company to manage customer records, including transaction history, products, suppliers, and rental records, ensuring secure and efficient data storage and retrieval. Integrated a billing and invoicing system, allowing for accurate and streamlined financial transactions.",
+      "Developed a recipe book web app displaying recipes with images and ingredients. Implemented DOM manipulation and responsive UI development.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "express.js",
-        color: "green-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "aws",
-        color: "green-text-gradient",
-      },
+      { name: "html", color: "blue-text-gradient" },
+      { name: "css", color: "pink-text-gradient" },
+      { name: "javascript", color: "green-text-gradient" },
     ],
     image: rental,
-    source_code_link: "https://github.com/syedahmedullah14",
+    source_code_link: "",
+  }
+  ,
+  {
+      name: "Search Results Clone",
+    description:
+      "Created a Google-style search results interface for practice in UI layout and DOM logic. Handled dynamic display and interactive UI features.",
+    tags: [
+      { name: "html", color: "blue-text-gradient" },
+      { name: "css", color: "pink-text-gradient" },
+      { name: "javascript", color: "green-text-gradient" },
+    ],
+    image: rental,
+    source_code_link: "",
+  }
+  ,
+  {
+     name: "Nxt Trendz - Product Details",
+    description:
+      "Built a product details web app applying frontend concepts learned in NxtWave. Implemented responsive interface and dynamic display logic using React.",
+    tags: [
+      { name: "react", color: "blue-text-gradient" },
+      { name: "javascript", color: "pink-text-gradient" },
+      { name: "css", color: "green-text-gradient" },
+    ],
+    image: rental,
+    source_code_link: "",
+  },
+  ,
+  {
+     name: "Jobby App",
+    description:
+      "Developed a job listing web app with login, home, jobs, and job details pages. Implemented dynamic UI using React and handled API requests/responses for job data.",
+    tags: [
+      { name: "react", color: "blue-text-gradient" },
+      { name: "javascript", color: "pink-text-gradient" },
+      { name: "css", color: "green-text-gradient" },
+    ],
+    image: rental,
+    source_code_link: "",
+  },
+  ,
+  {
+      name: "Meetup App",
+    description:
+      "Developed a Meetup web app focusing on React Context for state management. Implemented routes for home, register, and not found pages with dynamic content rendering.",
+    tags: [
+      { name: "react", color: "blue-text-gradient" },
+      { name: "javascript", color: "pink-text-gradient" },
+      { name: "css", color: "green-text-gradient" },
+    ],
+    image: rental,
+    source_code_link: "",
+  },
+  ,
+  {
+     name: "Rock Paper Scissors",
+    description:
+      "Built a Rock Paper Scissors web app to practice interactive UI concepts learned in NxtWave. Implemented game logic and dynamic score tracking.",
+    tags: [
+      { name: "react", color: "blue-text-gradient" },
+      { name: "javascript", color: "pink-text-gradient" },
+      { name: "css", color: "green-text-gradient" },
+    ],
+    image: rental,
+    source_code_link: "",
   },
 ];
 

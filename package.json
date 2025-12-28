@@ -23,7 +23,7 @@
     "react-slick": "^0.31.0",
     "react-vertical-timeline-component": "^3.6.0",
     "slick-carousel": "^1.8.1",
-    "three": "^0.149.0"
+    "three": "^0.159.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",

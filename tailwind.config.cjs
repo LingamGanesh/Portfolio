@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-
 module.exports = {
   content: ["./src/**/*.{js,jsx}"],
   mode: "jit",
@@ -23,26 +22,24 @@ module.exports = {
         xs: "450px",
       },
 
- keyframes: {
-  starBlink: {
-    "0%, 100%": { opacity: "0.2", transform: "scale(0.7) rotate(0deg)" },
-    "50%": { opacity: "1", transform: "scale(1.4) rotate(20deg)" },
-  },
-},
+      keyframes: {
+        starBlink: {
+          "0%, 100%": {
+            opacity: "0.2",
+            transform: "scale(0.7) rotate(0deg)",
+          },
+          "50%": {
+            opacity: "1",
+            transform: "scale(1.4) rotate(20deg)",
+          },
+        },
+      },
 
-animation: {
-  "star-blink": "starBlink 1.8s infinite ease-in-out",
-  "star-blink-fast": "starBlink 1.2s infinite ease-in-out",
-  "star-blink-slow": "starBlink 2.4s infinite ease-in-out",
-},
-
-
-animation: {
-  "star-blink": "starBlink 1.5s infinite ease-in-out",
-  "star-blink-fast": "starBlink 1s infinite ease-in-out",
-  "star-blink-slow": "starBlink 2s infinite ease-in-out",
-},
-
+      animation: {
+        "star-blink": "starBlink 1.5s infinite ease-in-out",
+        "star-blink-fast": "starBlink 1s infinite ease-in-out",
+        "star-blink-slow": "starBlink 2s infinite ease-in-out",
+      },
     },
   },
 
